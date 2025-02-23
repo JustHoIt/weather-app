@@ -1,3 +1,7 @@
+/**
+ * @DIR /src/domains/weather/utils/index.ts
+ */
+
 import { WeatherAdapterInterface } from "@/api/weather/types";
 
 /**

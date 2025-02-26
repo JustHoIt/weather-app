@@ -6,6 +6,7 @@ import { ForecastSection } from "./ForecastSection";
 import { Header } from "./Header";
 import Image from "next/image";
 import { BackgroundImage } from "./BackgroundImage";
+import { Layout } from "@/component/Layout";
 
 interface Props {
   live: Awaited<ReturnType<WeatherAdapterInterface["live"]>>;
@@ -35,5 +36,12 @@ const WeatherMain: FC<Props>  = (props) => {
   );
 };
 
+const WeatherMainWithLayout:FC<Props> = (props) => {
+  return (
+    <Layout>
+      <WeatherMain {...props} />
+    </Layout>
+  );
+}
 
-export { WeatherMain };
+export { WeatherMainWithLayout as WeatherMain };

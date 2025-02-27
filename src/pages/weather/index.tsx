@@ -52,6 +52,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       update_time: dayjs().format("YYYY-MM-DD HH:mm:ss"),
       image_data_url,
     },
+    revalidate: 60 * 60,
   };
 }
 
